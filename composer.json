@@ -1,0 +1,24 @@
+{
+    "name": "mirfilip/behat-mink",
+    "authors": [
+        {
+            "name": "Mirosław Filip",
+            "email": "miroslaw.filip@schibsted.pl"
+        }
+    ],
+    "require": {
+        "behat/behat": "^3.2",
+        "behat/mink": "^1.7",
+        "behat/mink-goutte-driver": "^1.2",
+        "behat/mink-selenium2-driver": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Behat\\": "tests/features/src/"
+        }
+    }
+}
