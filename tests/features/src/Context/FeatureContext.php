@@ -1,15 +1,18 @@
 <?php
 namespace Behat\Context;
 
-use Behat\Behat\Tester\Exception\PendingException;
-use Behat\Behat\Context\Context;
-use Behat\Gherkin\Node\PyStringNode;
-use Behat\Gherkin\Node\TableNode;
-use Calculator\Calculator;
+use Behat\MinkExtension\Context\MinkContext;
 
 /**
  * Defines application features from the specific context.
  */
-class FeatureContext implements Context
+class FeatureContext extends MinkContext
 {
+    /**
+     * @When I wait for the greeting to appear
+     */
+    public function iWaitForTheGreetingToAppear()
+    {
+        $this->getSession()->wait(1000, "document.getElementById('js-hello-world').innerHTML != ''");
+    }
 }

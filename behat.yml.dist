@@ -1,0 +1,21 @@
+default:
+  gherkin:
+    filters:
+      tags: ~@wip
+
+  extensions:
+      Behat\MinkExtension:
+        base_url: "http://localhost:9001"
+        browser_name: 'chrome'
+        sessions:
+          first_session:
+            goutte: ~
+          second_session:
+            selenium2: ~
+
+  suites:
+    default:
+      paths:
+        - %paths.base%/tests/features
+      contexts:
+        - Behat\Context\FeatureContext
