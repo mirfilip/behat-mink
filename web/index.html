@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello world</title>
+</head>
+<body>
+    <h1>Hello world</h1>
+    <button onclick="delayedGreeting();">Greet from JS</button>
+    <span id="js-hello-world"></span>
+</body>
+<script>
+    function showGreeting(){
+        document.getElementById("js-hello-world").innerHTML = "Hello world from JavaScript!"
+    }
+
+    function delayedGreeting(){
+        window.setTimeout(showGreeting, 1000);
+    }
+</script>
+</html>
